@@ -1,6 +1,7 @@
 import { Navigate, useRoutes } from 'react-router-dom'
 import { RouteObject } from '@/routers/interface'
 import Login from '@/views/login/index'
+import { LayoutIndex } from '@/components/layouts/lazyLoad'
 
 // * 首页地址（默认）
 export const HOME_URL: string = '/home/index'
@@ -18,12 +19,14 @@ export const rootRouter: RouteObject[] = [
     path: '/login',
     element: <Login />,
     meta: {
-      requiresAuth: false,
       title: '登录页',
       key: 'login'
     }
   },
-  ...routerArray,
+  {
+    element: <LayoutIndex />,
+    children: [...routerArray]
+  },
   {
     path: '*',
     element: <Navigate to="/404" />

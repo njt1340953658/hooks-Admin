@@ -16,7 +16,7 @@ const AuthRouter = (props: { children: JSX.Element }) => {
   const route = searchRoute(pathname, rootRouter)
 
   // * 判断当前路由是否需要访问权限(不需要权限直接放行)
-  if (!route.meta?.requiresAuth) return props.children
+  if (!route.meta?.roles) return props.children
 
   // * 判断是否有Token
   if (!token) return <Navigate to="/login" replace />

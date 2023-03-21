@@ -1,6 +1,6 @@
 export interface MetaProps {
   keepAlive?: boolean
-  requiresAuth?: boolean
+  roles?: any[]
   title: string
   key?: string
 }
