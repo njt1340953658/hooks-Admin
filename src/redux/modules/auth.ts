@@ -14,7 +14,6 @@ const authSlice = createSlice({
       state.authButtons = payload
     },
     setAuthRouter(state: AuthState, { payload }: PayloadAction<string[]>) {
-      console.log(payload, 'payload')
       state.authRouter = payload
     }
   }
