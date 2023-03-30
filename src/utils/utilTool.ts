@@ -84,7 +84,7 @@ export const searchRoute = (path: string, routes: RouteObject[] = []): RouteObje
 export const getBreadcrumbList = (path: string, menuList: []) => {
   let tempPath: any[] = []
   try {
-    const getNodePath = (node) => {
+    const getNodePath = (node: any) => {
       tempPath.push(node)
       // 找到符合条件的节点，通过throw终止掉递归
       if (node.path === path) {
@@ -116,8 +116,8 @@ export const getBreadcrumbList = (path: string, menuList: []) => {
  */
 export const findAllBreadcrumb = (menuList: []): { [key: string]: any } => {
   let handleBreadcrumbList: any = {}
-  const loop = (menuItem) => {
-    if (menuItem?.children?.length) menuItem.children.forEach((item) => loop(item))
+  const loop = (menuItem: any) => {
+    if (menuItem?.children?.length) menuItem.children.forEach((item: any) => loop(item))
     else handleBreadcrumbList[menuItem.path] = getBreadcrumbList(menuItem.path, menuList)
   }
   menuList.forEach((item) => loop(item))
@@ -183,8 +183,8 @@ export const stringify = (obj: object) => {
  * @param {Object} props
  * @description 针对搜索值做统一处理
  */
-export function convertParams(props) {
-  const newParams = {}
+export function convertParams(props: Record<string, any>) {
+  const newParams: Record<string, any> = {}
   for (const index in props) {
     const item = props[index]
     const type = typeof item
@@ -208,7 +208,7 @@ export function convertParams(props) {
  * */
 export const formatDateTime = (timelong: any, format = 'YYYY-MM-DD') => {
   if (!timelong) return ''
-  function format2n(val) {
+  function format2n(val: any) {
     return val < 10 ? '0' + '' + val : val
   }
   const date = new Date(timelong)
@@ -240,8 +240,8 @@ export const formatDateTime = (timelong: any, format = 'YYYY-MM-DD') => {
  * @param {Function} callback 回调事件
  * @param {Number} interval 轮询间隔时间
  */
-export const pollingHttp = (callback, interval = 2000) => {
-  let timer,
+export const pollingHttp = (callback: Function, interval = 2000) => {
+  let timer: any,
     isStop = false
   const stop = () => {
     isStop = true
@@ -251,10 +251,10 @@ export const pollingHttp = (callback, interval = 2000) => {
     isStop = false
     await loopEvent()
   }
-  const loopEvent = async () => {
+  const loopEvent: any = async () => {
     try {
       await callback(stop)
-    } catch (err) {
+    } catch (err: any) {
       throw new Error('轮询出错：', err)
     }
     if (isStop) return

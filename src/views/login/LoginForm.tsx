@@ -14,7 +14,7 @@ const LoginForm = () => {
   const [loading, setLoading] = useState<boolean>(false)
 
   // login
-  const onFinish = async (loginForm) => {
+  const onFinish = async (loginForm: any) => {
     try {
       setLoading(true)
       loginForm.password = 'e10adc3949ba59abbe56e057f20f883e'

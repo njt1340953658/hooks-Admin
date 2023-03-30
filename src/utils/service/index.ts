@@ -88,15 +88,15 @@ class RequestHttp {
   }
 
   // * 常用请求方法封装
-  get(url: string, params?: object, _object = {}) {
+  get(url: string, params?: any, _object = {}) {
     params = convertParams(params)
     return this.service.get(url, { params, ..._object })
   }
-  post(url: string, params?: object, _object = {}) {
+  post(url: string, params?: any, _object = {}) {
     params = convertParams(params)
     return this.service.post(url, params, _object)
   }
-  put(url: string, params?: object, _object = {}) {
+  put(url: string, params?: any, _object = {}) {
     params = convertParams(params)
     return this.service.put(url, params, _object)
   }

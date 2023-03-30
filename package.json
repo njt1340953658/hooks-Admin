@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "@types/react-router-dom": "^5.3.3",
@@ -38,7 +39,6 @@
     "@typescript-eslint/parser": "^5.57.0",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
-    "terser": "^5.16.8",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -49,6 +49,7 @@
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
+    "terser": "^5.16.8",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
     "vite-plugin-eslint": "^1.8.1",
