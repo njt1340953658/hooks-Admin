@@ -12,7 +12,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2022,
     sourceType: 'module',
     jsxPragma: 'React',
     ecmaFeatures: {
@@ -21,12 +21,12 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   extends: [
+    'prettier',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'prettier',
     'plugin:prettier/recommended'
   ],
   rules: {

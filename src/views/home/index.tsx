@@ -1,7 +1,11 @@
 import './index.less'
 
 const Home = () => {
-  return <div className="home">React vite</div>
+  return (
+    <div>
+      <div className="home">React vite首页</div>
+    </div>
+  )
 }
 
 export default Home

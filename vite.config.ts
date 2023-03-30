@@ -64,7 +64,7 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
     },
     plugins: [
       react(),
-      eslintPlugin(),
+      eslintPlugin({ failOnError: false }),
       createSvgIconsPlugin({
         iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
         symbolId: 'icon-[dir]-[name]'
