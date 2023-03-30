@@ -26,8 +26,7 @@
     "redux-persist": "^6.0.0",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.4.2",
-    "screenfull": "^6.0.2",
-    "terser": "^5.16.8"
+    "screenfull": "^6.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
@@ -39,6 +38,7 @@
     "@typescript-eslint/parser": "^5.57.0",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
+    "terser": "^5.16.8",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
